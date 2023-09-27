@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #f1f1f1;
+}
+
+.navCon{
+    position:absolute ;
+    left: 2vw;top: 3vh;
+    border-radius: 12px;
+    background: #d5d5d5;
+    width: 94vw ;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    gap: 0.3vw;
+}
+.navLogo{
+    margin-left: 3vw;
+    background: black;
+    height: 4vh;
+    width: 4vh;
+    border-radius: 6px;
+    display: flex; align-items: center;justify-content: center;
+}
+.navLogo>img{
+    position: relative;
+    width: 4vh;
+}
+.navLogoText{
+    font-size: 3vh;
+    color: #333333;
+    font-weight: bolder;
+}
+.navAL{
+    position: relative;
+    display: flex;
+    height: 8vh;
+    width: 30vw;
+    align-items: center;
+    margin-left: 6vw;
+    font-weight: bold;
+    gap: 3.8vw;
+    color: #333333;
+}
+.navALNav{
+    font-size: 2vh;
+    display: flex;
+    gap: 1vh;
+}
+.arrow{
+    top: 0.4vh;
+    position: relative;
+    height: 1vh;
+    width: 1vh;
+    border-top: 1px solid #333333;
+    border-right: 1px solid #333333;
+    transform: rotate(135deg);
+}
+.navLogin{
+    left: 22vw;
+    position: relative;
+    display: flex;
+    height: 8vh;
+    width: 25vw;
+    align-items: center;
+    font-weight: bold;
+    color: #333333;
+    gap: 3.2vw;
+}
+.navButton{
+    font-size: 2vh;
+}
+.navButton:nth-child(3){
+    color: white;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    width: 5vw;
+    background: #305040;
+}
