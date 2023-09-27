@@ -51,12 +51,12 @@ body{
     gap: 1vh;
 }
 .arrow{
-    top: 0.4vh;
+    top: 0.6vh;
     position: relative;
     height: 1vh;
     width: 1vh;
-    border-top: 1px solid #333333;
-    border-right: 1px solid #333333;
+    border-top: 2px solid #333333;
+    border-right: 2px solid #333333;
     transform: rotate(135deg);
 }
 .navLogin{
