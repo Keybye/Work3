@@ -1,0 +1,25 @@
+ul{
+  list-style-type: none;
+}
+.l-lyc ul {
+  font-size: 1em;
+  white-space: nowrap;
+  list-style: none;
+  transition: 0.4s;
+}
+
+.l-lyc li {
+  margin-left: 1%;
+  color: #555555;
+
+  height: 60px;
+  line-height: 1em;
+  transition: 400ms;
+}
+
+.l-lyc li.active {
+  margin-left: 0;
+  color: #333333;
+  font-weight: bold;
+  font-size: 2em;
+}
