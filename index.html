@@ -3,12 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-<div class="box">
+<div class="box"></div>
+<audio controls src="music/文夫%20-%20旧账.flac" id="myAudio"></audio>
+<div id="container">
+    <div class="top-hr"></div>
+    <nav>
+       <div class="nav-logo"></div>
+       <div class="nav-logoText">KeyByDemo</div>
+       <div class="nav-button">Premium</div>
+       <div class="nav-button">Classify</div>
+       <div class="nav-button">About</div>
+       <div class="nav-account">
+           <button>Contact</button>
+           <button>Sign in</button>
+           <button>Trial free</button>
+       </div>
+   </nav>
+    <main>
+        <div class="l-con">
+            <div class="l-songs">
+                <button></button>
+                <button onclick="playAudio()">PLAY</button>
+                <h1>旧账</h1>
+                <h2>文夫</h2>
+                <div class="l-lyc">
+                <ul class="lrc-list"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="r-con">
+            <div class="alarm"></div>
+            <div class="nextSong"></div>
+            <div class="next">
+                <div class="hr"></div>
+                <h1>Next Song</h1>
+                <p>我用什么把你留住</p>
+            </div>
+            <div class="top">
+                <div class="circleCon">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle2"></div>
+                <div class="circle2"></div>
+                <div class="circle2"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle3"></div>
+                <div class="circle3"></div>
+                    </div>
+            </div>
+            <div class="comment-con">
+                <div class="comment">
+                    <div class="prof"><img src="/prof/pro3.jpg" width="100%" style="border-radius: 999px;"></div>
+                    <p2>wojuedeok</p2>
+                    <p1>@我要摆起来了，快听听哈哈</p1>
+                </div>
+                  <div class="comment">
+                    <div class="prof"><img src="/prof/pro1.jpg" width="100%" style="border-radius: 999px;"></div>
+                    <p2>我要摆起来了</p2>
+                    <p1>啊？怎么有这么晦气的人</p1>
+                </div>
+            </div>
+            <div class="r-r-button">
+                <div class="comment-stats">
+                    <div class="stats"></div>
+                    <div class="stats"></div>
+                    <div class="stats"></div>
+                </div>
+                <div class="comment-button">
+                    <div class="c-button"></div>
+                    <div class="c-button"></div>
+                    <div class="c-button"></div>
+                </div>
+            </div>
+        </div>
+    </main>
 </div>
-<a href="DEMO.html">去看看</a>
+<script src="./js/lrc.js"></script>
+<script src="./js/music.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

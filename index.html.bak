@@ -6,11 +6,9 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div class="container">
-<img src="https://picsum.photos/1250/650" alt="">
-    </div>
 <div class="box">
-    <script src="js/main.js"></script>
 </div>
+<a href="DEMO.html">去看看</a>
+<script src="js/main.js"></script>
 </body>
 </html>
