@@ -142,7 +142,7 @@ function nextAudio() {
   if(i === 0){
     play.src='../music/我用什么把你留住.mp3';
     play.play();
-    songTitle.innerText = ".我用什么把你留住";
+    songTitle.innerText = "我用什么把你留住";
     singer.innerText ="福禄寿FloruitShow";
     songTitle.style.fontSize = "5em";
     i =1;
