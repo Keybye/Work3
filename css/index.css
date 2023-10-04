@@ -349,7 +349,7 @@ main{
     border-radius: 100px;
     height: 2.4em;
     width: 2.4em;
-    background: url("../icon/next.png") rgba(0,0,0,0) no-repeat center;
+    background: url("/icon/next.png") rgba(0,0,0,0) no-repeat center;
     background-size: 80% 80%;
 }
 .l-songs button:nth-child(2){
