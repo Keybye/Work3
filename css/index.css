@@ -349,11 +349,10 @@ main{
     border-radius: 100px;
     height: 2.4em;
     width: 2.4em;
-    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(0,0,0,0);
-    background-position: center;
-    background-image:  url("../icon/next.png");
-    background-size: 80% 80%;
 }
 .l-songs button:nth-child(2){
     margin-left: 2%;
