@@ -35,6 +35,7 @@ nav{
 }
 .nav-logoText{
     position: initial;
+    margin-top: .1em;
     margin-left: .1vw;
     font-size: 1.8vw;
     font-weight: bold;
@@ -131,7 +132,7 @@ main{
 .alarm{
     width: 49%;
     height: 50%;
-    background-image: url("../alarm/文夫 - 旧账.png");
+    background-image: url("../alarm/jiuzhang.png");
     background-size: cover;
     box-shadow: 0 0 2px dimgray;
 }
@@ -312,18 +313,18 @@ main{
 
 }
 .l-songs h1{
-    height: 40%;
+    clear: both;
     font-size: 8em;
     color: #333333;
-    width: 70%;
 }
 .l-songs h2{
-    margin-top: 2%;
-    font-size: 2.5em;
+    clear: both;
+    font-size: 2em;
     color: #555555;
     margin-left: .2em;
 }
 .l-lyc{
+    clear: both;
     margin-left: 1%;
     margin-top: 2%;
     display: flex;
@@ -333,9 +334,13 @@ main{
     height:25%;
     overflow: hidden;
     color: #333333;
+    transition: 2s;
 }
 .l-songs button{
     margin-top: 5%;
+}
+.l-songs button:active{
+    animation: playButton 400ms;
 }
 .l-songs button:nth-child(1){
     margin-left: 1%;
@@ -360,4 +365,12 @@ main{
 }
 audio{
     display: none;
+}
+@keyframes playButton{
+    50%{
+        scale: 0.8;
+}
+    100%{
+        scale: 1;
+    }
 }

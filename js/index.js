@@ -3,14 +3,13 @@
  */
 function parseLrc() {
     const arr = lrc.split('\n');
-    const result = arr.map(item => {
+    return arr.map(item => {
         const wordArr = item.split(']');
         return {
             time: parseTime(wordArr[0].substring(1)),
             word: wordArr[1]
         }
-    })
-    return result;
+    });
 }
 
 /**

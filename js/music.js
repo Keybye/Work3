@@ -113,7 +113,46 @@ function setOffset() {
 
 // 事件
 doms.audio.addEventListener("timeupdate", setOffset);
-var play = document.getElementById("myAudio")
-function playAudio(){
-  play.play();
+
+let i=0;
+let nextButton = document.getElementById('nextButton')
+let playButton = document.getElementById("playButton")
+let play = document.getElementById("myAudio")
+let amState = document.getElementById("playButtonPlayState")
+let songTitle = document.getElementById("songTitle")
+let singer = document.getElementById("singer")
+
+function playAudio() {
+  if (play.paused){
+    play.play();
+    }
+  else if(play.play()){
+    play.pause();
+  }
+}
+
+play.addEventListener('playing',function (){
+  playButton.innerText='PAUSE';
+})
+play.addEventListener('pause',function (){
+  playButton.innerText='PLAY';
+})
+
+function nextAudio() {
+  if(i === 0){
+    play.src='music/我用什么把你留住.mp3';
+    play.play();
+    songTitle.innerText = "我用什么把你留住";
+    singer.innerText ="福禄寿FloruitShow";
+    songTitle.style.fontSize = "5em";
+    i =1;
+  }
+  else {
+    play.src = 'music/jiuzhang.mp3'
+    songTitle.innerText = "旧账";
+    songTitle.style.fontSize = "8em";
+    singer.innerText = "文夫";
+    play.play();
+    i =0;
+  }
 }
