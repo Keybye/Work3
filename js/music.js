@@ -140,15 +140,15 @@ play.addEventListener('pause',function (){
 
 function nextAudio() {
   if(i === 0){
-    play.src='music/我用什么把你留住.mp3';
+    play.src='../music/我用什么把你留住.mp3';
     play.play();
-    songTitle.innerText = "我用什么把你留住";
+    songTitle.innerText = ".我用什么把你留住";
     singer.innerText ="福禄寿FloruitShow";
     songTitle.style.fontSize = "5em";
     i =1;
   }
   else {
-    play.src = 'music/jiuzhang.mp3'
+    play.src = '../music/jiuzhang.mp3'
     songTitle.innerText = "旧账";
     songTitle.style.fontSize = "8em";
     singer.innerText = "文夫";
