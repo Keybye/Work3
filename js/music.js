@@ -1,3 +1,4 @@
+
 /**
  * 解析歌词字符串为数组对象
  * @param {string} lrc 歌词字符串
@@ -7,8 +8,46 @@
  *  words: 歌词
  * }
  */
+  let nextSong = document.getElementById('next-song');
+  let playButton = document.getElementById("playButton");
+  let play = document.getElementById("myAudio");
+  let songTitle = document.getElementById("songTitle");
+  let singer = document.getElementById("singer");
+  let songList=0;
+  let lines = lrc[songList].split("\n");
+  let Time = document.getElementById('myAudio');
+  let timeText = document.getElementById('timeText')
+
+  function getTime() {
+    timeText.innerText = Time.currentTime;
+    setInterval(getTime,1000)
+  }
+
+
+ function nextAudio() {
+  if(songList === 0){
+    play.src='../music/我用什么把你留住.mp3';
+    play.play();
+    songTitle.innerText = "我用什么把你留住";
+    nextSong.innerText = "旧账";
+    singer.innerText ="福禄寿FloruitShow";
+    songTitle.style.fontSize = "5em";
+    songList =1;
+  }
+  else {
+    play.src = '../music/jiuzhang.mp3'
+    songTitle.innerText = "旧账";
+    nextSong.innerText = "我用什么把你留住";
+    songTitle.style.fontSize = "8em";
+    singer.innerText = "文夫";
+    play.play();
+    songList =0;
+  }
+}
+
+
+
 function parseLrc() {
-  const lines = lrc.split("\n");
   const result = []; // 歌词对象数组
 
   for (let i = 0; i < lines.length; i++) {
@@ -114,14 +153,6 @@ function setOffset() {
 // 事件
 doms.audio.addEventListener("timeupdate", setOffset);
 
-let i=0;
-let nextButton = document.getElementById('nextButton')
-let playButton = document.getElementById("playButton")
-let play = document.getElementById("myAudio")
-let amState = document.getElementById("playButtonPlayState")
-let songTitle = document.getElementById("songTitle")
-let singer = document.getElementById("singer")
-
 function playAudio() {
   if (play.paused){
     play.play();
@@ -138,21 +169,3 @@ play.addEventListener('pause',function (){
   playButton.innerText='PLAY';
 })
 
-function nextAudio() {
-  if(i === 0){
-    play.src='../music/我用什么把你留住.mp3';
-    play.play();
-    songTitle.innerText = "我用什么把你留住";
-    singer.innerText ="福禄寿FloruitShow";
-    songTitle.style.fontSize = "5em";
-    i =1;
-  }
-  else {
-    play.src = '../music/jiuzhang.mp3'
-    songTitle.innerText = "旧账";
-    songTitle.style.fontSize = "8em";
-    singer.innerText = "文夫";
-    play.play();
-    i =0;
-  }
-}

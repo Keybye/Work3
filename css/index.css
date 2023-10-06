@@ -114,6 +114,8 @@ main{
     width: 49%;
     height: 100%;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 .r-con{
     float: right;
@@ -336,6 +338,7 @@ main{
     color: #333333;
     transition: 2s;
 }
+
 .l-songs button{
     margin-top: 5%;
 }
@@ -364,6 +367,7 @@ main{
     font-size: 1em;
     color: #efefef;
     background: #333333;
+
 }
 audio{
     display: none;
@@ -375,4 +379,16 @@ audio{
     100%{
         scale: 1;
     }
+}
+footer{
+    left: 3%;
+    position: absolute;
+    width: 40%;
+    height: 10%;
+    background-color: red;
+    bottom: 3vh;
+    display: flex;
+}
+footer img{
+    border-radius: 999px;
 }
