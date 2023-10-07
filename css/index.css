@@ -280,6 +280,8 @@ main{
     align-items: center;
 }
 .c-button{
+    border: none;
+    background-color: rgba(0,0,0,0);
     width: 2em;
     height: 2em;
     border-radius: 99em;
@@ -381,36 +383,35 @@ audio{
     }
 }
 footer{
-    border-radius: 0 999px 999px 0;
-    background-color: #555;
+    border-radius:999px;
     position: absolute;
-    height: 12%;
+    height: 9%;
     width: 25%;
+    left: 3vw;
     bottom: 6vh;
     gap: 20px;
     display: flex;
 }
 footer > img{
-    margin-left: 3vw;
     width: auto;
-    height:60%;
+    height:100%;
     align-self: center;
-    border: 2px solid #dedede;
+    border: 3px solid #333;
     border-radius: 999px;
 }
-footer > hr{
-    width: 4px;
-    height: 65%;
-    align-self: center;
-    background-color: #ddd;
-    border-radius: 20px;
-    border: 0;
+.footer-text-con{
+    border-radius: 999px;
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 3px solid #333;
+    display: flex;
+    background-color: transparent;
 }
-footer > span{
+.footer-text-con > span{
     letter-spacing: 2px;
-    color: #ddd;
+    color: #333;
     font-family: "Alibaba PuHuiTi 2.0 45 Light", fantasy ;
     align-self: center;
     white-space: nowrap;
-    font-size: 2em;
+    font-size: 1.5em;
 }
