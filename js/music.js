@@ -15,14 +15,11 @@
   let singer = document.getElementById("singer");
   let songList=0;
   let lines = lrc[songList].split("\n");
-  let Time = document.getElementById('myAudio');
-  let timeText = document.getElementById('timeText')
+  let timeText = document.getElementById('timeText');
 
-  function getTime() {
-    timeText.innerText = Time.currentTime;
-    setInterval(getTime,1000)
+  function Time(){
+    timeText.innerText = timeText.currentTime;
   }
-
 
  function nextAudio() {
   if(songList === 0){
@@ -154,9 +151,9 @@ function setOffset() {
 doms.audio.addEventListener("timeupdate", setOffset);
 
 function playAudio() {
-  if (play.paused){
+  if (play.paused) {
     play.play();
-    }
+  }
   else if(play.play()){
     play.pause();
   }
@@ -168,4 +165,8 @@ play.addEventListener('playing',function (){
 play.addEventListener('pause',function (){
   playButton.innerText='PLAY';
 })
+play.addEventListener('playing',function (){
+  timeText.innerText='PAUSE';
+})
+
 

@@ -1,8 +1,15 @@
+.box-con{
+    width: 100%;
+    height: 100%;
+    background-color: #dedede;
+    position: absolute;
+    z-index: 1999;
+}
 .box{
     z-index: 1000;
     height: 100px;
     width: 100px;
-    background-color: royalblue;
+    background-color: black;
     position: absolute;
     overflow: hidden;
     display: inline-block;
@@ -15,7 +22,7 @@
     position: absolute;
     height: 120px;
     width: 120px;
-    background: linear-gradient(#dde,#58e);
+    background: linear-gradient(#dde,#333);
     animation: roll1 2s running infinite;
 }
 

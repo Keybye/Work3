@@ -1,6 +1,9 @@
-let loader = document.querySelector(".box")
+let loader = document.querySelector(".box-con")
     document.onreadystatechange = function (){
     if(document.readyState ==="complete"){
-         loader.style.display="none";
+        setTimeout(function (time){
+            console.log('ok');
+            loader.style.display='none';
+        },1000)
     }
 }
