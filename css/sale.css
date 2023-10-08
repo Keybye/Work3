@@ -75,7 +75,8 @@ s{
     font-size: 2em;
 }
 ul{
-    margin-left: -20%;
+    margin-left: 30%;
+    align-self: start;
     display: flex;
     flex-direction: column;
     gap:.2em;
