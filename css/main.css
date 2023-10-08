@@ -1,44 +1,417 @@
-.box-con{
-    width: 100%;
+*{
+    margin:0;
+    padding:0;
+}
+#container{
+    min-width: 1080px;
+    min-height: 720px;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e3e3e3;
+}
+nav{
+    z-index: 999;
+    position: absolute;
+    min-height: 60px;
+    width:96%;
+    height: 7%;
+    border-radius: 15px;
+    background-color: #f1f1f1;
+    margin: 2% auto auto auto;left: 0;right: 0;
+    display: flex;
+    align-items: center;
+}
+.nav-logo{
+    margin-left: 2%;
+    border-radius: 8px;
+    position: relative;
+    background: url("../icon/logo.png") no-repeat black center;
+    background-size: 80% 80%;
+    min-height: 25px;
+    min-width: 25px;
+    width: 2.1vw;
+    height: 2.1vw;
+}
+.nav-logoText{
+    position: initial;
+    margin-top: .1em;
+    margin-left: .1vw;
+    font-size: 1.8vw;
+    font-weight: bold;
+    font-family: "JetBrains Mono", math;
+    letter-spacing: 1px;
+}
+.nav-button{
+    min-width: 70px;
+    margin-left: 2vw;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    height: 60%;
+    width: 5vw;
+    text-align: center;
+    color:#333333;
+    font-size: .7vw;
+    transition: 400ms;
+    letter-spacing: 1px;
+}
+.nav-button:nth-child(3){
+    margin-left: 3%;
+}
+.nav-button:hover{
+    color: #dedede;
+    font-weight: bold;
+    background-color: #333333;
+}
+.nav-account{
+    margin-right: 2vw;
+    margin-left: auto;
+    font-size: 1vw;
+    display: flex;
     height: 100%;
-    background-color: #dedede;
-    position: absolute;
-    z-index: 1999;
+    gap: 1vw;
+    align-items: center;
 }
-.box{
-    z-index: 1000;
-    height: 100px;
-    width: 100px;
-    background-color: black;
+.nav-account button{
+    min-width: 80px;
+    font-size: .7vw;
+    color: #333333;
+    border: none;
+    background:none;
+    width: 5vw;
+    height: 60%;
+    border-radius: 10px;
+    letter-spacing: 1px;
+}
+.nav-account button:hover{
+    background:none;
+    background: #333333;
+    color: #dedede;
+    transition: 400ms;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+}
+.nav-account button:nth-child(3){
+    font-size: 1vw;
+    background: #333333;
+    color: #dedede;
+    font-weight: bold;
+    width: 6vw;
+    height: 65%;
+}
+main{
     position: absolute;
+    margin: auto;left: 0;right: 0;top: 12vh;bottom: 0;
+    width: 94%;
+    height: 80%;
+    display: block;
+}
+.l-con{
+    float: left;
+    width: 49%;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.r-con{
+    float: right;
+    width: 49%;
+    height: 100%;
+    flex-grow: 1;
+    /*background: #5588ee;*/
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: flex;
+    gap: 2%;
+}
+.r-con *{
+    border-radius: 15px;
+}
+.alarm{
+    width: 49%;
+    height: 50%;
+    background-image: url("../alarm/jiuzhang.png");
+    background-size: cover;
+    box-shadow: 0 0 2px dimgray;
+}
+.nextSong{
+    z-index: 2;
+    width: 49%;
+    height: 33%;
+    background: url("../alarm/OIP-C.jpg") center;
+    background-size: cover;
+}
+.next{
+    z-index: 1;
+    height: 13%;
+    width: 49%;
+    flex-direction: column;
+    text-align: right;
+}
+.next h1,p{
+    margin-right: .3vw;
     overflow: hidden;
-    display: inline-block;
-    margin: auto;top: 0;bottom: 0;right: 0;left: 0;
-    animation: roll 2s running infinite;
+    float: right;
+    width: 60%;
+    order: 1;
+    z-index: 1;
+    border-radius: 0;
+    font-size: 2.1vw;
+}
+
+.next p{
+    border-radius: 0;
+    font-size: 1.2vw;
+    color: rgb(50, 50, 50);
+}
+.hr{
+    margin-top: -10%;
+    margin-left: 10%;
+    float: left;
+    z-index: -1;
+    background: red;
+    width: 5px;
+    height: 145%;
+}
+.comment-con{
+    width: 49%;
+    height: 28%;
+    background-color: #cccfcf;
+}
+.comment{
+    margin-top: 2%;
+    margin-left: 6%;
+    width: 94%;
+    height: 44%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.comment *{
+    border-radius: 0;
+}
+.prof{
+    align-self: stretch;
+    width: 3rem;
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+.comment p2{
+    align-self: flex-start;
+    margin-top: 5%;
+    width: 80%;
+    font-size: .3em;
+    letter-spacing: 1px;
+    color: #4d4d4d;
+}
+.comment p1{
+    font-size: 1em;
+    margin-top: 1.5%;
+    width: 80%;
+    height: 20%;
+    color: #141414;
+}
+.top{
+    display: grid;
+    height: 15%;
+    width: 49%;
+}
+.top-hr{
+    float: right;
+    margin-right: 7vw;
+    margin-top: 6vh;
+    width: 5px;
+    height:40%;
+    background-color: #c9c9c9;
+}
+.circleCon{
+    margin-left: 15%;
+    margin-top: 3%;
+    width: 40%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.circle, .circle2, .circle3{
+    width: 1em;
+    height: 1em;
+    grid-row: 1;
+    background-color: #c9c9c9;
+}
+.circle{
+    margin-left: 1em;
+}
+.circle2{
+    grid-row: 2;
+}
+.circle3{
+    grid-row: 3;
+    margin-left: 1em;
+}
+.r-r-button{
+    width: 49%;
+    background-color: #c9c9c9;
+    height: 52%;
+}
+.comment-stats{
+    border-radius:0;
+    border-bottom: 2px solid black;
+    margin-left: 5%;
+    margin-top: 10%;
+    width: 90%;
+    height: 65%;
+    display: grid;
+    grid-template-columns: repeat(3,20%);
+    grid-template-rows: repeat(3,1fr);
+    justify-content:space-around;
+}
+.comment-button{
+    margin-left: 5%;
+    width: 90%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.c-button{
+    border: none;
+    background-color: rgba(0,0,0,0);
+    width: 2em;
+    height: 2em;
+    border-radius: 99em;
+    float: left;
+    background-image: url("../icon/like.png");
+    background-size: cover;
+}
+.c-button:nth-child(2){
+    background-image: url("../icon/good.png");
+}
+.c-button:nth-child(3){
+    background-image: url("../icon/dislike.png");
+}
+.stats{
+    border-radius: 12px 12px 0 0;
+    background-color: #ad2540;
+}
+.stats:nth-child(1) {
+    grid-row: 2/4;
+}
+.stats:nth-child(2) {
+    background-color: #055788;
+    grid-row: 1/4;
 
 }
-.box::before{
-    content: "";
+.stats:last-child{
+    background-color: #898989;
+    grid-row: 3/4;
+}
+.l-songs{
+    width: 100%;
+    height: 60%;
+
+}
+.l-songs h1{
+    clear: both;
+    font-size: 8em;
+    color: #333333;
+}
+.l-songs h2{
+    clear: both;
+    font-size: 2em;
+    color: #555555;
+    margin-left: .2em;
+}
+.l-lyc{
+    clear: both;
+    margin-left: 1%;
+    margin-top: 2%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    height:25%;
+    overflow: hidden;
+    color: #333333;
+    transition: 2s;
+}
+
+.l-songs button{
+    margin-top: 5%;
+}
+.l-songs button:active{
+    animation: playButton 400ms;
+}
+.l-songs button:nth-child(1){
+    margin-left: 1%;
+    float: left;
+    border:2px solid #333333;
+    border-radius: 100px;
+    height: 2.3em;
+    width: 2.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0);
+}
+.l-songs button:nth-child(2){
+    margin-left: 2%;
+    border:none;
+    background:none;
+    border-radius: 9999px;
+    width: 4.5em;
+    height: 2em;
+    font-size: 1em;
+    color: #efefef;
+    background: #333333;
+
+}
+audio{
+    display: none;
+}
+@keyframes playButton{
+    50%{
+        scale: 0.8;
+}
+    100%{
+        scale: 1;
+    }
+}
+footer{
+    border-radius:999px;
     position: absolute;
-    height: 120px;
-    width: 120px;
-    background: linear-gradient(#dde,#333);
-    animation: roll1 2s running infinite;
+    height: 9%;
+    width: 25%;
+    left: 3vw;
+    bottom: 6vh;
+    gap: 20px;
+    display: flex;
 }
-
-    @keyframes roll {
-      from{
-        transform: translate(0, 0) rotateZ(0deg) ;
-      }
-      to{
-        transform:translate(0, 0) rotateZ(360deg) ;
-      }
-    }
-        @keyframes roll1 {
-      from{
-        transform: translate(-50%, -50%) rotateZ(0deg) ;
-      }
-      to{
-          transform:translate(-50%,-50%) rotateZ(-360deg) ;
-      }
-    }
+footer > img{
+    width: auto;
+    height:100%;
+    align-self: center;
+    border: 3px solid #333;
+    border-radius: 999px;
+}
+.footer-text-con{
+    border-radius: 999px;
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 3px solid #333;
+    display: flex;
+    background-color: transparent;
+}
+.footer-text-con > span{
+    letter-spacing: 2px;
+    color: #333;
+    font-family: "Alibaba PuHuiTi 2.0 45 Light", fantasy ;
+    align-self: center;
+    white-space: nowrap;
+    font-size: 1.5em;
+}
