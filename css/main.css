@@ -16,7 +16,7 @@ nav{
     min-height: 60px;
     width:96%;
     height: 7%;
-    border-radius: 15px;
+    border-radius: 6px;
     background-color: #f1f1f1;
     margin: 2% auto auto auto;left: 0;right: 0;
     display: flex;
@@ -24,7 +24,7 @@ nav{
 }
 .nav-logo{
     margin-left: 2%;
-    border-radius: 8px;
+    border-radius: 4px;
     position: relative;
     background: url("../icon/logo.png") no-repeat black center;
     background-size: 80% 80%;
@@ -48,7 +48,7 @@ nav{
     justify-content: center;
     display: flex;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 4px;
     height: 60%;
     width: 5vw;
     text-align: center;
@@ -82,7 +82,7 @@ nav{
     background:none;
     width: 5vw;
     height: 60%;
-    border-radius: 10px;
+    border-radius: 4px;
     letter-spacing: 1px;
 }
 .nav-account button:hover{
@@ -129,7 +129,7 @@ main{
     gap: 2%;
 }
 .r-con *{
-    border-radius: 15px;
+    border-radius: 8px;
 }
 .alarm{
     width: 49%;
@@ -396,14 +396,14 @@ footer > img{
     width: auto;
     height:100%;
     align-self: center;
-    border: 3px solid #333;
+    border: 2px solid #333;
     border-radius: 999px;
 }
 .footer-text-con{
     border-radius: 999px;
     padding-left: 5%;
     padding-right: 5%;
-    border: 3px solid #333;
+    border: 2px solid #333;
     display: flex;
     background-color: transparent;
 }
@@ -413,5 +413,5 @@ footer > img{
     font-family: "Alibaba PuHuiTi 2.0 45 Light", fantasy ;
     align-self: center;
     white-space: nowrap;
-    font-size: 1.5em;
+    font-size: 1em;
 }

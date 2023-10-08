@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="./icon/music.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="css/anm.css">
+</head>
+<body>
+<div class="box-con"><div class="box"></div></div>
+<audio controls id="myAudio" src="music/jiuzhang.mp3"></audio>
+<div id="container">
+    <div class="top-hr"></div>
+    <nav>
+       <div class="nav-logo"></div>
+       <div class="nav-logoText">KeyByDemo</div>
+       <div class="nav-button">Premium</div>
+       <div class="nav-button">Classify</div>
+       <div class="nav-button">About</div>
+       <div class="nav-account">
+           <button>Contact</button>
+           <button>Sign out</button>
+           <button>Free Trial</button>
+       </div>
+   </nav>
+    <main>
+        <div class="l-con">
+            <div class="l-songs">
+                <button onclick="nextAudio()"><img src="./icon/next.png" alt="" width="80%" height="80%"></button>
+                <button onclick="playAudio()" id="playButton">PLAY</button>
+                <h1 id="songTitle">旧账</h1>
+                <h2 id="singer">文夫</h2>
+                <div class="l-lyc">
+                <ul class="lrc-list"></ul>
+                </div>
+            </div>
+             <div class="l-pro"></div>
+        </div>
+        <div class="r-con">
+            <div class="alarm"></div>
+            <div class="nextSong"></div>
+            <div class="next">
+                <div class="hr"></div>
+                <h1>Next Song</h1>
+                <p id="next-song">我用什么把你留住</p>
+            </div>
+            <div class="top">
+                <div class="circleCon">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle2"></div>
+                <div class="circle2"></div>
+                <div class="circle2"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle3"></div>
+                <div class="circle3"></div>
+                    </div>
+            </div>
+            <div class="comment-con">
+                <div class="comment">
+                    <div class="prof"><img src="prof/pro3.jpg" width="100%" style="border-radius: 999px;"></div>
+                    <p2>wojuedeok</p2>
+                    <p1>@我要摆起来了，快听听哈哈</p1>
+                </div>
+                  <div class="comment">
+                    <div class="prof"><img src="prof/pro1.jpg" width="100%" style="border-radius: 999px;"></div>
+                    <p2>我要摆起来了</p2>
+                    <p1>啊？怎么有这么晦气的人</p1>
+                </div>
+            </div>
+            <div class="r-r-button">
+                <div class="comment-stats">
+                    <div class="stats">
+                        <div class="white"></div>
+                        <div class="colorful"></div>
+                    </div>
+                    <div class="stats">
+                        <div class="white"></div>
+                        <div class="colorful"></div>
+                    </div>
+                    <div class="stats">
+                        <div class="white"></div>
+                        <div class="colorful"></div>
+                    </div>
+                </div>
+                <div class="comment-button">
+                    <button class="c-button"></button>
+                    <button class="c-button"></button>
+                    <button class="c-button"></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer><img src="prof/pro1.jpg">
+        <div class="footer-text-con">
+        <span>欢迎回来,开摆</span>
+        </div>
+    </footer>
+
+</div>
+<script src="js/main.js">
+</script>
+
+<script src="./js/lrc.js"></script>
+
+<script src="./js/music.js" defer></script>
+
+<script src="./js/index.js"></script>
+
+</body>
+</html>
