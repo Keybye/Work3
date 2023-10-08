@@ -63,7 +63,7 @@ h4{
 .icon:nth-child(2){
     width: 30px;
     height: 30px;
-    background-image: url("../icon/qq.png");
+    background-image: url("../icon/QQ.png");
     background-size: cover;
 }
 .icon:nth-child(3){
@@ -84,7 +84,7 @@ label img{
     justify-content: end;
 }
 label input{
-    background-size: 100% 0px, 100% 1px;
+    background-size: 100% 0, 100% 1px;
     background-color: transparent;
     border: none;
     border-bottom: 2px solid #999;
