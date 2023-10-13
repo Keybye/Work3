@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="css/anm.css">
 </head>
 <body>
-<div class="box-con"><div class="box"></div></div>
+
 <audio controls id="myAudio" src="music/jiuzhang.mp3"></audio>
 <div id="container">
+    <div class="box-con"><div class="box"></div></div>
     <div class="top-hr"></div>
     <nav>
        <div class="nav-logo"></div>
@@ -76,22 +77,18 @@
             </div>
             <div class="r-r-button">
                 <div class="comment-stats">
-                    <div class="stats">
-                        <div class="white"></div>
+                    <div class="stats" id="fav">
                         <div class="colorful"></div>
                     </div>
-                    <div class="stats">
-                        <div class="white"></div>
-                        <div class="colorful"></div>
+                    <div class="stats" id="Like">
                     </div>
-                    <div class="stats">
-                        <div class="white"></div>
-                        <div class="colorful"></div>
+                    <div class="stats" id="unlike">
+
                     </div>
                 </div>
                 <div class="comment-button">
                     <button class="c-button"></button>
-                    <button class="c-button"></button>
+                    <button class="c-button" onclick="like()"></button>
                     <button class="c-button"></button>
                 </div>
             </div>

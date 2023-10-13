@@ -1,8 +1,8 @@
 .box-con{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
     background-color: #dedede;
-    position: absolute;
     z-index: 1999;
 }
 .box{

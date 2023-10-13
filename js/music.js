@@ -13,10 +13,8 @@
   let play = document.getElementById("myAudio");
   let songTitle = document.getElementById("songTitle");
   let singer = document.getElementById("singer");
-  let songList=0;
-  let lines = lrc[songList].split("\n");
   let timeText = document.getElementById('timeText');
-
+  let songList= 0;
   function Time(){
     timeText.innerText = timeText.currentTime;
   }
@@ -42,22 +40,20 @@
   }
 }
 
-
-
 function parseLrc() {
-  const result = []; // 歌词对象数组
+    let lines = lrc[songList].split("\n");
+    let result = []; // 歌词对象数组
 
   for (let i = 0; i < lines.length; i++) {
-    const str = lines[i];
-    const parts = str.split("]");
-    const timeStr = parts[0].substring(1);
-    const obj = {
+    let str = lines[i];
+    let parts = str.split("]");
+    let timeStr = parts[0].substring(1);
+    let obj = {
       time: parseTime(timeStr),
       words: parts[1]
     };
     result.push(obj);
   }
-
   return result;
 }
 
@@ -67,14 +63,14 @@ function parseLrc() {
  * @returns 时间数值
  */
 function parseTime(timeStr) {
-  const parts = timeStr.split(":");
+  let parts = timeStr.split(":");
   return +parts[0] * 60 + +parts[1];
 }
 
-const lrcData = parseLrc();
+let lrcData = parseLrc();
 
 // 获取需要的dom
-const doms = {
+let doms = {
   audio: document.querySelector("audio"),
   ul: document.querySelector(".lrc-list"),
   container: document.querySelector(".l-lyc")
@@ -86,7 +82,7 @@ const doms = {
  * 如果没有任何一句显示，则为-1
  */
 function findIndex() {
-  const curTime = doms.audio.currentTime;
+  let curTime = doms.audio.currentTime;
   for (let i = 0; i < lrcData.length; i++) {
     if (curTime < lrcData[i].time) {
       return lrcData[i - 1].words ? i - 1 : i - 2;
@@ -103,9 +99,9 @@ function findIndex() {
  * 用文档片段一次性加元素节点，减少回流次数
  */
 function createElements() {
-  const frag = document.createDocumentFragment(); // 文档片段
+  let frag = document.createDocumentFragment(); // 文档片段
   for (let i = 0; i < lrcData.length; i++) {
-    const li = document.createElement("li");
+    let li = document.createElement("li");
     li.textContent = lrcData[i].words;
     frag.appendChild(li);
   }
@@ -115,17 +111,17 @@ function createElements() {
 createElements();
 
 // 容器高度
-const containerHight = doms.container.clientHeight;
+let containerHight = doms.container.clientHeight;
 // li的高度
-const liHight = doms.ul.children[0].clientHeight;
+let liHight = doms.ul.children[0].clientHeight;
 // 偏移最大值
-const maxOffset = doms.ul.clientHeight - containerHight;
+let maxOffset = doms.ul.clientHeight - containerHight;
 
 /**
  * 设置ul元素的便宜量
  */
 function setOffset() {
-  const index = findIndex();
+  let index = findIndex();
   let offset = liHight * index ;
   if (offset < 0) {
     offset = 0;
@@ -165,8 +161,28 @@ play.addEventListener('playing',function (){
 play.addEventListener('pause',function (){
   playButton.innerText='PLAY';
 })
-play.addEventListener('playing',function (){
-  timeText.innerText='PAUSE';
-})
+
+
+let l = 80;
+let c = 150;
+let r = 60;
+function  stats() {
+  let Like = document.getElementById('Like');
+  Like.style.height  = c/(l+c+r)*100+ '%';
+  let fav = document.getElementById('fav');
+  fav.style.height  = l/(l+c+r)*100+ '%';
+  let unlike = document.getElementById('unlike');
+  unlike.style.height  = r/(l+c+r)*100+ '%';
+  return Like;
+}
+
+  function like() {
+    c += 40;
+    setTimeout('stats()',100);
+    console.log(parseLrc());
+  }
+  
+
+
 
 
