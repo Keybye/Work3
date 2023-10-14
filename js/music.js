@@ -178,10 +178,20 @@ function  stats() {
 
   function like() {
     c += 40;
-    setTimeout('stats()',100);
+    setTimeout('stats()');
     console.log(parseLrc());
   }
-  
+
+  function unlike() {
+  r += 40;
+  setTimeout('stats()');
+  }
+
+  function fav() {
+  l += 40;
+  setTimeout('stats()');
+  }
+
 
 
 
