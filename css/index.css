@@ -81,7 +81,6 @@ label img{
     justify-content: end;
 }
 label input{
-    background-size: 100% 0, 100% 1px;
     background-color: transparent;
     border: none;
     border-bottom: 2px solid #aeaeae;
