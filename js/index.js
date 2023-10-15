@@ -5,7 +5,7 @@ function $(id){
 
 function  formFocus() {
     let conBg = document.querySelector('.container');
-    $('form').style.boxShadow= '0 0 12px rgba(237,112,81,.3)';
+    $('form').style.boxShadow= '0 0 30px rgba(108,59,64,.7)';
     conBg.style.backdropFilter = 'grayscale(80%) blur(10px)';
 }
 function  formBlur() {

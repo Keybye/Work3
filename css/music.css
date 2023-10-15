@@ -10,7 +10,7 @@ ul{
 
 .l-lyc li {
   margin-left: 1%;
-  color: #555555;
+  color: #c1c1c1;
   height: 60px;
   line-height: 1em;
   transition: 400ms;
@@ -18,7 +18,7 @@ ul{
 
 .l-lyc li.active {
   margin-left: 0;
-  color: #333333;
+  color: #ededed;
   font-weight: bold;
   font-size: 2em;
 }
