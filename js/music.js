@@ -21,7 +21,7 @@
 
  function nextAudio() {
   if(songList === 0){
-    play.src='../music/我用什么把你留住.mp3';
+    play.src='../music/woyongshemebaniliuzhu.mp3';
     play.play();
     songTitle.innerText = "我用什么把你留住";
     nextSong.innerText = "旧账";
@@ -147,16 +147,28 @@ function setOffset() {
 doms.audio.addEventListener("timeupdate", setOffset);
 
 function playAudio() {
+  let playHr = document.querySelector('.playHr1')
+  let playHr1 = document.querySelector('.playHr2')
+  let playHr2 = document.querySelector('.playHr')
+  let prof = document.getElementById('prof');
+  let text = document.getElementById('span');
   if (play.paused) {
     play.play();
+    text.style.display='none';
+    playHr.style.display =playHr1.style.display =playHr2.style.display ='block';
+    prof.style.animationPlayState = playHr.style.animationPlayState =prof.style.animationPlayState =playHr1.style.animationPlayState =playHr2.style.animationPlayState ='running';
   }
   else if(play.play()){
     play.pause();
+    prof.style.animationPlayState = playHr.style.animationPlayState =prof.style.animationPlayState =playHr1.style.animationPlayState =playHr2.style.animationPlayState ='paused';
+
   }
 }
 
+
 play.addEventListener('playing',function (){
   playButton.innerText='PAUSE';
+
 })
 play.addEventListener('pause',function (){
   playButton.innerText='PLAY';
@@ -173,13 +185,11 @@ function  stats() {
   fav.style.height  = l/(l+c+r)*100+ '%';
   let unlike = document.getElementById('unlike');
   unlike.style.height  = r/(l+c+r)*100+ '%';
-  return Like;
 }
 
   function like() {
     c += 40;
     setTimeout('stats()');
-    console.log(parseLrc());
   }
 
   function unlike() {
