@@ -38,7 +38,7 @@ nav{
     margin-top: .1em;
     color: #dedede;
     margin-left: .3vw;
-    font-size: 2vw;
+    font-size: 2em;
     font-weight: bold;
     font-family: "JetBrains Mono", math;
     letter-spacing: 1px;
@@ -54,7 +54,7 @@ nav{
     width: 5vw;
     text-align: center;
     color:#dedede;
-    font-size: .7vw;
+    font-size: .3em;
     transition: 400ms;
     letter-spacing: 1px;
 }
@@ -77,7 +77,7 @@ nav{
 }
 .nav-account button{
     min-width: 80px;
-    font-size: .7vw;
+    font-size: .8rem;
     color: #dedede;
     border: none;
     background:none;
@@ -96,11 +96,11 @@ nav{
     flex-grow: 1;
 }
 .nav-account button:nth-child(3){
-    font-size: 1vw;
+    font-size: 1rem;
     background: #333333;
     color: #dedede;
     font-weight: bold;
-    width: 6vw;
+    width: 6rem;
     height: 65%;
 }
 main{
@@ -244,25 +244,25 @@ main{
     width: 1em;
     height: 1em;
     grid-row: 1;
-    background-color: #4f4f4f;
+    background-color: #3a3a3a ;
 }
 .circle{
     margin-left: 1em;
 }
 .circle2:nth-child(6){
-    background-color: #5a5a5a;
+    background-color: #373737;
 }
 .circle:nth-child(2),.circle2:nth-child(7){
-    background-color: #4a4a4a;
+    background-color: #3f3f3f;
 }
 .circle:nth-child(3),.circle2:nth-child(8),.circle3:nth-child(11){
     background-color: #424242;
 }
 .circle:nth-child(4),.circle2:nth-child(9),.circle3:last-child{
-    background-color: #3f3f3f;
+    background-color: #4a4a4a;
 }
 .circle:nth-child(5){
-    background-color: #3a3a3a;
+    background-color: #4f4f4f;
 }
 .circle2{
     grid-row: 2;
@@ -360,15 +360,12 @@ main{
 }
 
 .l-songs button{
-    margin-top: 5%;
 }
 .l-songs button:active{
     animation: playButton 400ms;
 }
 .l-songs button:nth-child(1){
     margin-left: 1%;
-    margin-top: 5.5%;
-    float: left;
     border:2px solid #ededed;
     border-radius: 100px;
     height: 2em;
@@ -379,7 +376,6 @@ main{
     background-color: rgba(0,0,0,0);
 }
 .l-songs button:nth-child(2){
-    margin-left: 2%;
     border:none;
     background:none;
     border-radius: 9999px;
@@ -485,4 +481,11 @@ footer > img{
     100%{
         transform: rotate(360deg);
     }
+}
+.buttonCard{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 }
